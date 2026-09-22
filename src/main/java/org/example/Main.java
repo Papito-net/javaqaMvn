@@ -1,14 +1,13 @@
 public class Main {
-
     public static void main(String[] args) {
         BonusService service = new BonusService();
 
-        int expected = 30;
-        long actual = service.calculate(1_000, true);
-        System.out.println("1. " + expected + " == ? == " + actual);
+        long amount = 2_000;
+        boolean registered = true;
 
-        expected = 500;
-        actual = service.calculate(1_000_000, true);
-        System.out.println("2. " + expected + " == ? == " + actual);
+        long bonus = service.calculate(amount, registered);
+
+        System.out.println("Bonus: " + bonus);
+
     }
 }
